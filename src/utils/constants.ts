@@ -6,8 +6,8 @@ export const LANGUAGES = [
 		value: 'en',
 	},
 	{
-		text: 'NL',
-		value: 'nl',
+		text: 'FA',
+		value: 'fa',
 	},
 ];
 

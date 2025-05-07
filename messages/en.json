@@ -1,6 +1,11 @@
 {
 	"HomePage": {
-		"title": "Nextjs GraphQL Quickstart",
-		"description": "Next.js GraphQL Quickstart is a modern, full-stack web application template designed to help you get started quickly with Next.js, GraphQL, Prisma, Apollo Client, and Redux Toolkit. This project offers a powerful, scalable foundation for building dynamic and performant web applications using the latest technologies."
+		"title": "personal finance tracker",
+		"description": "A simple app to track your income and expenses, so you can manage your money better, build good habits, and reach your financial goals."
+	},
+	"TransactionForm": {
+		"amount": "Amount",
+		"description": "Description",
+		"category": "Category"
 	}
 }
