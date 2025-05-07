@@ -25,9 +25,15 @@ export default async function RootLayout({ children, params }: LayoutProps) {
 		notFound();
 	}
 
+	const direction = locale === 'fa' ? 'rtl' : 'ltr';
+
 	const messages = await getMessages();
 	return (
-		<html lang={locale} className={`${GeistSans.variable} antialiased`}>
+		<html
+			lang={locale}
+			dir={direction}
+			className={`${GeistSans.variable} antialiased`}
+		>
 			<body>
 				<Providers>
 					<NextIntlClientProvider messages={messages}>
