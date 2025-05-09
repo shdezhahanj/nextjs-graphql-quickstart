@@ -2,6 +2,7 @@
 
 Welcome to the Next.js + GraphQL Quickstart! This boilerplate is your go-to solution for building scalable and modern web applications with ease. Combining the best tools in web development, it provides everything you need to get started quickly.
 
+test
 ---
 
 ### 🎯 Features
