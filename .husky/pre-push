@@ -1,11 +1,7 @@
 echo '👷🔨 Building the magic... Here we go! 👷🔨'
 
-npm run build ||
-(
-    echo '❌ Oh no! Build failed! 🚨
+npm run build || {
+	echo '❌ Oh no! Build failed! 🚨
             Call Bob! We need to fix this mess! 🔧'
-    false;
-)
-
-
-exit 0
+	exit 1
+}

@@ -15,7 +15,7 @@ export const FEATURES: IFeature[] = [
 	{
 		id: 1,
 		icon: 'NextJs',
-		title: 'Next.js 15',
+		title: 'Next.js 16',
 	},
 	{
 		id: 2,

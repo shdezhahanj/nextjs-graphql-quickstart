@@ -4,6 +4,7 @@ export const Biome = (props: SVGProps<SVGSVGElement>) => (
 	<svg
 		fill="currentColor"
 		role="img"
+		aria-label="Biome"
 		viewBox="0 0 24 24"
 		xmlns="http://www.w3.org/2000/svg"
 		id="Biome--Streamline-Simple-Icons.svg"

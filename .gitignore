@@ -39,6 +39,9 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# generated clients
+/src/generated
+
 /.idea
 /.vscode
 /.cursor

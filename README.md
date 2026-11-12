@@ -1,4 +1,4 @@
-## 🚀 Next.js 15 + GraphQL Quickstart
+## 🚀 Next.js 16 + GraphQL Quickstart
 
 Welcome to the Next.js + GraphQL Quickstart! This boilerplate is your go-to solution for building scalable and modern web applications with ease. Combining the best tools in web development, it provides everything you need to get started quickly.
 
@@ -6,7 +6,7 @@ Welcome to the Next.js + GraphQL Quickstart! This boilerplate is your go-to solu
 
 ### 🎯 Features
 
-- 🌐 Next.js 15 : Experience the power of the new App Router for advanced routing and rendering capabilities.
+- 🌐 Next.js 16 : Experience the power of the App Router for advanced routing and rendering capabilities. Requires Node.js 22 or newer. CI and Docker use the version in `.nvmrc`.
 - 🔗 Apollo Client : A powerful GraphQL client for seamless API consumption and state management.
 - 🛠️ GraphQL Yoga & Pothos : Simplify API creation with schema-first GraphQL server development.
 - 📦 Prisma ORM : Effortlessly manage database schemas and migrations with Prisma.
@@ -68,6 +68,14 @@ npm run dev
 ```
 
 Visit your app at http://localhost:3000! 🎉
+
+### Docker
+
+```bash
+docker compose up --build
+```
+
+The app is published from the `develop` branch. GitHub Actions lints, type-checks, and builds the project, then pushes a container image to GHCR. A server deploy runs only when `SERVER_HOST`, `SERVER_USER`, and `SERVER_SSH_KEY` are configured, and it starts the published image instead of rebuilding it on the server.
 
 ---
 

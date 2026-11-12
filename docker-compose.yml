@@ -1,23 +1,29 @@
-version: '3.8'
-
 services:
   app:
+    image: ${APP_IMAGE:-ghcr.io/shdezhahanj/nextjs-graphql-quickstart:latest}
     build: .
     ports:
       - "3000:3000"
     environment:
-      - DATABASE_URL=postgresql://postgres:postgres@db:5432/mydb
+      DATABASE_URL: postgresql://postgres:postgres@db:5432/mydb
     depends_on:
-      - db
+      db:
+        condition: service_healthy
+    restart: unless-stopped
 
   db:
-    image: postgres:16-alpine
+    image: postgres:18-alpine
     environment:
-      - POSTGRES_PASSWORD=postgres
-      - POSTGRES_DB=mydb
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: mydb
     volumes:
       - db-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d mydb"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    restart: unless-stopped
 
 volumes:
   db-data:
-
